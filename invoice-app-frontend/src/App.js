@@ -15,13 +15,13 @@ function App() {
 
   const handleLogin = (username) => {
     setIsAuthenticated(true);
-    setSumUser(1);
+    //setSumUser(1);
     setLoggedInUser(username);
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    setSumUser(0);
+    //setSumUser(0);
     setLoggedInUser('');
   };
 
