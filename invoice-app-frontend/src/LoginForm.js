@@ -18,9 +18,12 @@ function LoginForm({ onLogin, sumUser }) {
     const user = validUsers.find(
       (user) => user.username === username && user.password === password
     );
+    alert('sumUser is now:'+ sumUser); 
 
-    if (user && sumUser > 0) {
+    if (user && sumUser === 0) {
       onLogin(username);  // Pass the username to the onLogin function
+      sumUser = sumUser +1;
+      alert('sumUser is now afer 1++:'+ sumUser); 
     } else {
       alert('Invalid credentials or a user is already logged in');
     }
