@@ -19,7 +19,7 @@ function LoginForm({ onLogin, sumUser }) {
       (user) => user.username === username && user.password === password
     );
 
-    if (user && sumUser === 0) {
+    if (user && sumUser > 0) {
       onLogin(username);  // Pass the username to the onLogin function
     } else {
       alert('Invalid credentials or a user is already logged in');
