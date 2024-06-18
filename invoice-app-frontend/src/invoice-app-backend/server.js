@@ -74,7 +74,7 @@ db.once('open', function() {
 //---
 
 // Your API endpoints github  -vi måste lägga upp koden på Git hub för att se den på nätet!!!
-app.get('/x2', (req, res) => {
+app.get('/x3', (req, res) => {
 
   // Handle request and respond with data
   res.json({ message: 'Data from MongoDB!!!!!!!!!!!!!!!!!!' });
