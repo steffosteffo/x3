@@ -15,13 +15,13 @@ function App() {
 
   const handleLogin = (username) => {
     setIsAuthenticated(true);
-    //setSumUser(1);
+    setSumUser(1);
     setLoggedInUser(username);
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    //setSumUser(0);
+    setSumUser(0);
     setLoggedInUser('');
   };
 
@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       {!isAuthenticated || sumUser === 1 ? ( //star2
         <LoginForm onLogin={handleLogin} sumUser={sumUser} />
-      ) : setSumUser(1) ( //ster2
+      ) :  ( 
         
         <>
           <h1>Fakturering</h1>
