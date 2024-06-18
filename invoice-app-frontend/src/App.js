@@ -31,9 +31,10 @@ function App() {
 
   return (
     <div className="App">
-      {!isAuthenticated ? (
+      {!isAuthenticated || sumUser === 1 ? ( //star2
         <LoginForm onLogin={handleLogin} sumUser={sumUser} />
-      ) : (
+      ) : setSumUser(1) ( //ster2
+        
         <>
           <h1>Fakturering</h1>
           <p>Welcome, {loggedInUser}!</p>
