@@ -78,7 +78,7 @@ app.get('/x3', (req, res) => {
 app.use('/api/products', require('./routes/products'));
 app.use('/api/customers', require('./routes/customers'));
 app.use('/api/invoices', require('./routes/invoices'));
-app.use('/api/users', require('./routes/users'));
+app.use('/api/userss', require('./routes/userss'));
 
 // Define your route to fetch all customers
 /*
@@ -112,8 +112,8 @@ const transporter = nodemailer.createTransport({
   
   service: 'gmail',
   auth: {
-    user:  process.env.EMAIL_USER, // "steffo2024@gmail.com"
-    pass:  process.env.EMAIL_PASS //"Sommar2018!Sommar2018!"
+   // user:  process.env.EMAIL_USER, // "steffo2024@gmail.com"
+  //  pass:  process.env.EMAIL_PASS //"Sommar2018!Sommar2018!"
            
   }  
 });
