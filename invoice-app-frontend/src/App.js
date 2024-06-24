@@ -10,18 +10,15 @@ import LoginForm from './LoginForm';
 function App() {
   const [selectedForm, setSelectedForm] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [sumUser, setSumUser] = useState(0);
   const [loggedInUser, setLoggedInUser] = useState('');
 
   const handleLogin = (username) => {
     setIsAuthenticated(true);
-    setSumUser(1);
     setLoggedInUser(username);
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    setSumUser(0);
     setLoggedInUser('');
   };
 
@@ -32,7 +29,7 @@ function App() {
   return (
     <div className="App">
       {!isAuthenticated  ? ( 
-        <LoginForm onLogin={handleLogin} sumUser={sumUser} />
+        <LoginForm onLogin={handleLogin} />
       ) :  ( 
         
         <>

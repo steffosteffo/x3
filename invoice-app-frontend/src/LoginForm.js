@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function LoginForm({ onLogin, sumUser }) {
+function LoginForm({onLogin}) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
@@ -20,7 +20,7 @@ function LoginForm({ onLogin, sumUser }) {
     );
 
 
-    if (user && sumUser === 0) {
+    if (user) {
       onLogin(username);  // Pass the username to the onLogin function
       
     } else {
