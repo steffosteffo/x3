@@ -40,7 +40,7 @@ function App() {
           <p>Welcome, {loggedInUser}!</p>
           <button onClick={handleLogout}>Logga ut</button>
           <div>
-            <button onClick={() => handleSelectForm('Email')}>Email</button>
+           
             <button onClick={() => handleSelectForm('customer')}>Registrera Kund</button>
             <button onClick={() => handleSelectForm('editCustomer')}>Ändra Kund</button>
             <button onClick={() => handleSelectForm('Product')}>Registerera Produkt</button>
