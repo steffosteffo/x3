@@ -27,6 +27,7 @@ const corsOpt = {
     'http://localhost:5000',
     'http://213.112.48.128:5000/api/customers',
     'http://213.112.48.128:5000/api/customers',
+    'http://213.112.48.128:5000/api/userss',
     
    // process.env.CUSTOMER_API_1,
   //  process.env.CUSTOMER_API_2,
