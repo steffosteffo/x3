@@ -1,4 +1,4 @@
-// models/User.js
+// models/Userr.js
 const mongoose = require('mongoose');
 
 const userrSchema = new mongoose.Schema({
