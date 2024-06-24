@@ -1,12 +1,14 @@
-// models/Customer.js
+// models/User.js
 const mongoose = require('mongoose');
 
-const customerSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: String,
-  phone: String,
-  adress: String,
-  email: String,
-  webadress: String,
+  password: String,
+  taken: Number,
 });
 
-module.exports = mongoose.model('Customer', customerSchema);
+// Check if the model already exists before defining it
+const User = mongoose.models.User || mongoose.model('User', userSchema);
+
+
+module.exports = mongoose.model('User', userSchema);
