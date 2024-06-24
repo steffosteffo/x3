@@ -78,6 +78,7 @@ app.get('/x3', (req, res) => {
 app.use('/api/products', require('./routes/products'));
 app.use('/api/customers', require('./routes/customers'));
 app.use('/api/invoices', require('./routes/invoices'));
+app.use('/api/users', require('./routes/users'));
 
 // Define your route to fetch all customers
 /*
