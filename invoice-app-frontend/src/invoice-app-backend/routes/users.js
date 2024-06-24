@@ -2,13 +2,13 @@
 // routes/users1.js
 const express = require('express');
 const router = express.Router();
-const Userr = require('../models/Userr');
+const Userr = require('../models/User');
 
 router.post('/', (req, res) => {
   try {
-    const userr = new userr(req.body);
-    const savedUserr = userr.save();
-    res.json(savedUserr);
+    const user = new user(req.body);
+    const savedUser = user.save();
+    res.json(savedUser);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -17,8 +17,8 @@ router.post('/', (req, res) => {
 // Route to handle Fetch (hämta) all users
 router.get('/', async (req, res) => {
   try {
-    const userss = await Userr.find();
-    res.json(userss);
+    const users = await User.find();
+    res.json(users);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -31,26 +31,24 @@ router.put('/:id', async (req, res) => {
 
   try {
     // Find the user by ID
-    const userr = await Userr.findById(userrId);
+    const user = await User.findById(userId);
 
-    if (!userr) {
+    if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
 
     // Update user properties
-    userr.name = name;
-    userr.password = password;
-    userr.taken = taken;
+    user.name = name;
+    user.password = password;
+    user.taken = taken;
    
     
     // Save the updated user
-    const updatedUserr = await userr.save();
-    res.json(updatedUserr);
+    const updatedUser = await user.save();
+    res.json(updatedUser);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
-
-
 
 module.exports = router;

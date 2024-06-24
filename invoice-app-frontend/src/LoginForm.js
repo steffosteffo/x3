@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import User from './invoice-app-backend/models/User';
 
 function LoginForm({onLogin}) {
   const [username, setUsername] = useState('');
@@ -9,7 +10,7 @@ function LoginForm({onLogin}) {
 
     // List of valid users
     const validUsers = [
-      { username: 'a', password: 'a' },
+      { username ='a', password: 'a' },
       { username: 'b', password: 'b' },
       { username: 'c', password: 'c' }
     ];

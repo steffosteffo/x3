@@ -1,7 +1,7 @@
 
 const dotenv = require('dotenv');
 dotenv.config();
-const userRoutes = require('./routes/userss'); // Import user routes
+
 
 // require('dotenv').config();
 
@@ -29,7 +29,7 @@ const corsOpt = {
     'http://localhost:5000',
     'http://213.112.48.128:5000/api/customers',
     'http://213.112.48.128:5000/api/customers',
-    'http://213.112.48.128:5000/api/userss',
+    'http://213.112.48.128:5000/api/users',
     
    // process.env.CUSTOMER_API_1,
   //  process.env.CUSTOMER_API_2,
@@ -81,7 +81,7 @@ app.get('/x3', (req, res) => {
 app.use('/api/products', require('./routes/products'));
 app.use('/api/customers', require('./routes/customers'));
 app.use('/api/invoices', require('./routes/invoices'));
-app.use('/api/userss', require('./routes/userss'));
+app.use('/api/userss', require('./routes/users'));
 
 // Define your route to fetch all customers
 /*

@@ -6,6 +6,7 @@ import ProductForm from './ProductForm';
 import EditProductForm from './EditProductForm';
 import Email from './Email';
 import LoginForm from './LoginForm';
+import User from './invoice-app-backend/models/User';
 
 
 function App() {
