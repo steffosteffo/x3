@@ -6,8 +6,8 @@ const User = require('../models/User');
 
 router.post('/', (req, res) => {
   try {
-    const user = new User(req.body);
-    const savedUser = User.save();
+    const user = new user(req.body);
+    const savedUser = user.save();
     res.json(savedUser);
   } catch (error) {
     res.status(500).json({ error: error.message });
