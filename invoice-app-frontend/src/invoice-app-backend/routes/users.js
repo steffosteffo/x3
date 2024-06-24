@@ -1,4 +1,4 @@
-// routes/customers.js
+// routes/users.js
 const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
@@ -23,26 +23,25 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Route to handle updating an existing customer
+// Route to handle updating an existing user
 router.put('/:id', async (req, res) => {
   const userId = req.params.id;
   const { name, password, taken } = req.body;
 
   try {
-    // Find the customer by ID
+    // Find the user by ID
     const user = await User.findById(userId);
 
     if (!user) {
-      return res.status(404).json({ message: 'Customer not found' });
+      return res.status(404).json({ message: 'User not found' });
     }
 
     // Update user properties
-    customer.name = name;
-    customer.password = password;
-    customer.taken = taken;
+    user.name = name;
+    user.password = password;
+    user.taken = taken;
    
     
-
     // Save the updated user
     const updatedUser = await user.save();
     res.json(updatedUser);
