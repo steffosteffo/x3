@@ -10,7 +10,7 @@ function LoginForm({onLogin}) {
     // List of valid users
     const validUsers = [
       { username: 'a', password: 'a' },
-      { username: 'Martin', password: 'Martin' },
+      { username: 'b', password: 'b' },
       { username: 'c', password: 'c' }
     ];
 

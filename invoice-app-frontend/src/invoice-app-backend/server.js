@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 const dotenv = require('dotenv');
 dotenv.config();
 
@@ -89,6 +80,7 @@ app.use('/api/customers', require('./routes/customers'));
 app.use('/api/invoices', require('./routes/invoices'));
 
 // Define your route to fetch all customers
+/*
 app.get('/api/customers', async (req, res) => {
   try {
     const customers = await Customer.find();
@@ -97,7 +89,7 @@ app.get('/api/customers', async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 });
-
+star 3 */
 
 // Start Server
 //app.listen(PORT, () => {
