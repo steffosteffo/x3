@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      {!isAuthenticated && sumUser == 0 ? ( 
+      {!isAuthenticated  ? ( 
         <LoginForm onLogin={handleLogin} sumUser={sumUser} />
       ) :  ( 
         

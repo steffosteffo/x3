@@ -22,7 +22,8 @@ function EditCustomerForm() {
       //const response = await axios.get('/api/customers');
        // const response = await axios.get('http://localhost:5000/api/customers'); // STAR!
        //const response = await axios.get('http://steffohost.hopto.org:5000/api/customers');
-       const response = await axios.get('http://213.112.60.15:5000/api/customers');
+       const response = await axios.get('http://213.112.48.128:5000/api/customers');
+       
                                          
 
       console.log('-------------------------response from fetchCustomers: =   ' + response)
